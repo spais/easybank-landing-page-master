@@ -1,0 +1,80 @@
+/*
+    Layout
+--------------------------------------*/
+
+/* Header Section */
+.header-section {
+    @include layout-properties(1);
+}
+
+.header-brand {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-primaryBtn {
+    display: none;
+}
+
+/* Hero Section */
+.hero-section {
+    @include layout-properties(3);
+    padding-top: 0;
+    z-index: 9999;
+    &::before {
+        content: '';
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $very-light-gray;
+        z-index: -9999;
+    }
+}
+
+/* About Section */
+.about-section {
+    @include layout-properties(3);
+    &::before {
+        content: '';
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $light-grayish-blue;
+        z-index: -9999;
+    }
+}
+
+/* Blog Section */
+.blog-section {
+    @include layout-properties(3);
+    &::before {
+        content: '';
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $very-light-gray;
+        z-index: -9999;
+    }
+}
+
+/* Footer Section */
+.footer-section {
+    @include layout-properties(2);
+    &::before {
+        content: '';
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $dark-blue;
+        z-index: -9999;
+    }
+}

@@ -1,0 +1,222 @@
+/*
+    Module
+--------------------------------------*/
+
+/* Nav */
+
+.navbar {
+    display: none;
+}
+
+.navbar-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 11px;
+    cursor: pointer;
+    &__bar {
+        width: inherit;
+        height: 1px;
+        background-color: $dark-blue;
+        transition: all 200ms;
+    }
+}
+
+/* Heading Section */
+.sectionHeading {
+    text-align: center;
+    &__title-h1 {
+        font-size: 4.4rem;
+        line-height: 1.2em;
+        font-weight: $font-weight-normal;
+        color: $dark-blue;
+        letter-spacing: -0.04ch;
+    }
+    &__title-h2 {
+        font-size: 3.6rem;
+        line-height: 1.2em;
+        font-weight: $font-weight-normal;
+        color: $dark-blue;
+        letter-spacing: -0.04ch;
+    }
+    &__info {
+        margin-top: 2.4rem;
+    }
+}
+
+/* Hero Section */
+.hero-image-section {
+    width: 100vw;
+    height: 84vmin;
+    margin-left: -2.4rem;
+    position: relative;
+    overflow: hidden;
+    &__img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(../images/bg-intro-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0 calc(100% + 36px);
+        &::after {
+            content: '';
+            width: calc(100% - 3.6rem);
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: calc(50% - 45%);
+            background-image: url(../images/image-mockups.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 0 calc(100% - 20px);
+        }
+    }
+}
+
+.hero-primaryBtn {
+    margin-top: 2.4rem;
+    text-align: center;
+}
+
+/* About Section */
+.about-card {
+    margin-top: 4rem;
+    text-align: center;
+    &:nth-of-type(1) {
+        margin-top: 7.2rem;
+    }
+    &__icon {
+        width: 100px;
+        height: 100;
+        display: inline-block;
+    }
+    &__title {
+        margin-top: 2.4rem;
+        font-size: 2.4rem;
+        font-weight: $font-weight-normal;
+        color: $dark-blue;
+    }
+    &__text {
+        margin-top: 24px;
+    }
+}
+
+/* Blog Section */
+.blog-card {
+    margin-top: 4rem;
+    border-radius: 8px;
+    background-color: $white;
+    overflow: hidden;
+    &__image {
+        &-img {
+            width: 100%;
+            height: auto;
+            display: block;
+
+        }
+    }
+    &__content {
+        padding: 2.4rem 2.4rem 4.8rem;
+    }
+    &__author {
+        display: inline-block;
+        font-size: 1.4rem;
+        font-weight: $font-weight-bold;
+        color: $grayish-blue;
+    }
+    &__title {
+        margin-top: 1.2rem;
+        font-size: 2.4rem;
+        line-height: 1.2em;
+        font-weight: $font-weight-normal;
+        color: $dark-blue;
+    }
+    &__text {
+        margin-top: 1.2rem;
+    }
+}
+
+/* Footer Section */
+.footer-brand {
+    width: 100%;
+    text-align: center;
+}
+
+.socialLinks {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 3.2rem auto 0;
+    &__link {
+        flex-basis: 12%;
+    }
+    &__icons {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.footer-navbar {
+    width: 100%;
+    margin-top: 2.4rem;
+}
+
+.footerlinks {
+    width: inherit;
+    text-align: center;
+    &__items {
+
+    }
+    &__link {
+        display: inline-block;
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+        font-size: 1.8rem;
+        font-weight: $font-weight-bold;
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+.footer-primaryBtn {
+    margin-top: 3.2rem;
+    text-align: center;
+}
+
+.copyrights {
+    margin-top: 2.4rem;
+}
+
+.attribution {
+    font-size: 1.4rem;
+    margin-top: 2.4rem;
+    text-align: center;
+    & a {
+        color: $very-light-gray;
+        text-decoration: none;
+    }
+}
+
+/* Images */
+.header-brand__logo {
+    display: inline-flex;
+}
+
+/* Buttons */
+.primaryBtn {
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 50px;
+    background: rgb(49,211,92);
+    background: linear-gradient(90deg, rgba(49,211,92,1) 30%, rgba(43,183,218,1) 100%);
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 0.9em;
+    font-weight: $font-weight-extra-bold;
+    text-decoration: none;
+}

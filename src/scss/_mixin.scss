@@ -1,0 +1,11 @@
+/*
+    Mixin
+--------------------------------------*/
+
+/* Layout */
+
+@mixin layout-properties($amount) {
+    width: 100vw;
+    padding: 2.4rem * $amount 2.4rem;
+    position: relative;
+}
