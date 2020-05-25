@@ -2,8 +2,12 @@
     Module
 --------------------------------------*/
 
-/* Nav */
+/* Header Section */
+.header-primaryBtn {
+    display: none;
+}
 
+/* Nav */
 .navbar {
     display: none;
 }
@@ -52,6 +56,10 @@
     margin-left: -2.4rem;
     position: relative;
     overflow: hidden;
+    @media (min-width: $desktop-width) {
+        width: 100%;
+        margin: 0;
+    }
     &__img {
         width: 100%;
         height: 100%;

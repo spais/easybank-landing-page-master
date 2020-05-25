@@ -8,4 +8,9 @@
     width: 100vw;
     padding: 2.4rem * $amount 2.4rem;
     position: relative;
+    @media (min-width: $desktop-width) {
+        width: 100%;
+        max-width: 1170px;
+        margin: 0 auto;
+    }
 }

@@ -13,10 +13,6 @@
     justify-content: space-between;
 }
 
-.header-primaryBtn {
-    display: none;
-}
-
 /* Hero Section */
 .hero-section {
     @include layout-properties(3);
@@ -28,7 +24,7 @@
         height: 100%;
         position: absolute;
         top: 0;
-        left: 0;
+        left: calc(50% - 50vw);
         background-color: $very-light-gray;
         z-index: -9999;
     }
@@ -43,7 +39,7 @@
         height: 100%;
         position: absolute;
         top: 0;
-        left: 0;
+        left: calc(50% - 50vw);
         background-color: $light-grayish-blue;
         z-index: -9999;
     }
@@ -58,7 +54,7 @@
         height: 100%;
         position: absolute;
         top: 0;
-        left: 0;
+        left: calc(50% - 50vw);
         background-color: $very-light-gray;
         z-index: -9999;
     }
@@ -73,7 +69,7 @@
         height: 100%;
         position: absolute;
         top: 0;
-        left: 0;
+        left: calc(50% - 50vw);
         background-color: $dark-blue;
         z-index: -9999;
     }
