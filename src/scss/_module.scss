@@ -3,13 +3,64 @@
 --------------------------------------*/
 
 /* Header Section */
+.header-brand {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @media (min-width: $desktop-width) {
+        display: inline-flex;
+        flex: 1;
+    }
+}
+
 .header-primaryBtn {
     display: none;
+    @media (min-width: $desktop-width) {
+        display: inline-flex;
+        flex: 1;
+        text-align: right;
+    }
 }
 
 /* Nav */
 .navbar {
     display: none;
+    @media (min-width: $desktop-width) {
+        display: block;
+        flex: 2;
+        text-align: left;
+    }
+}
+
+.navlinks {
+    display: inline-flex;
+    &__items {
+        position: relative;
+    }
+    &__link {
+        display: inline;
+        padding: 8px 16px;
+        font-weight: $font-weight-bold;
+        text-decoration: none;
+        color: $grayish-blue;
+        position: relative;
+        &::after {
+            content: '';
+            width: 100%;
+            height: 0;
+            position: absolute;
+            left: 0;
+            bottom: -32px;
+            background-color: $lime-green;
+            border-radius: 5px;
+            transition: 200ms all;
+        }
+        &:hover {
+            &::after {
+                height: 6px;
+            }
+        }
+    }
 }
 
 .navbar-toggle {
@@ -19,6 +70,9 @@
     width: 24px;
     height: 11px;
     cursor: pointer;
+    @media (min-width: $desktop-width) {
+        display: none;
+    }
     &__bar {
         width: inherit;
         height: 1px;
@@ -30,6 +84,10 @@
 /* Heading Section */
 .sectionHeading {
     text-align: center;
+    @media (min-width: $desktop-width) {
+        width: 55%;
+        text-align: left;
+    }
     &__title-h1 {
         font-size: 4.4rem;
         line-height: 1.2em;
@@ -55,9 +113,9 @@
     height: 84vmin;
     margin-left: -2.4rem;
     position: relative;
-    overflow: hidden;
     @media (min-width: $desktop-width) {
         width: 100%;
+        height: 50vh;
         margin: 0;
     }
     &__img {
@@ -70,6 +128,11 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 0 calc(100% + 36px);
+        @media (min-width: $desktop-width) {
+            left: 0;
+            right: 0;
+            background-image: none;
+        }
         &::after {
             content: '';
             width: calc(100% - 3.6rem);
@@ -81,6 +144,9 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-position: 0 calc(100% - 20px);
+            @media (min-width: $desktop-width) {
+                display: none;
+            }
         }
     }
 }
@@ -88,12 +154,20 @@
 .hero-primaryBtn {
     margin-top: 2.4rem;
     text-align: center;
+    @media (min-width: $desktop-width) {
+        text-align: left;
+    }
 }
 
 /* About Section */
 .about-card {
     margin-top: 4rem;
     text-align: center;
+    @media (min-width: $desktop-width) {
+        flex-basis: 22%;
+        margin-top: 7.2rem;
+        text-align: left;
+    }
     &:nth-of-type(1) {
         margin-top: 7.2rem;
     }
@@ -101,6 +175,9 @@
         width: 100px;
         height: 100;
         display: inline-block;
+        @media (min-width: $desktop-width) {
+            width: 80px;
+        }
     }
     &__title {
         margin-top: 2.4rem;
@@ -119,12 +196,18 @@
     border-radius: 8px;
     background-color: $white;
     overflow: hidden;
+    @media (min-width: $desktop-width) {
+        flex-basis: 24%;
+    }
     &__image {
+        @media (min-width: $desktop-width) {
+            height: 174px;
+            overflow: hidden;
+        }
         &-img {
             width: 100%;
             height: auto;
             display: block;
-
         }
     }
     &__content {
@@ -143,15 +226,43 @@
         font-weight: $font-weight-normal;
         color: $dark-blue;
     }
+    &__link {
+        text-decoration: none;
+        color: $dark-blue;
+        transition: 200ms all;
+        &:hover {
+            color: $lime-green;
+        }
+    }
     &__text {
         margin-top: 1.2rem;
     }
 }
 
 /* Footer Section */
+
+.footer-left {
+    @media (min-width: $desktop-width) {
+        text-align: left;
+        flex: 1;
+    }
+}
+
+.footer-center {
+    @media (min-width: $desktop-width) {
+        flex: 2;
+    }
+}
+
+.footer-right {
+    @media (min-width: $desktop-width) {
+        flex: 1;
+        text-align: right;
+    }
+}
+
 .footer-brand {
     width: 100%;
-    text-align: center;
 }
 
 .socialLinks {
@@ -159,6 +270,10 @@
     justify-content: space-between;
     width: 70%;
     margin: 3.2rem auto 0;
+    @media (min-width: $desktop-width) {
+        width: 60%;
+        margin: 4.8rem 0 0;
+    }
     &__link {
         flex-basis: 12%;
     }
@@ -166,17 +281,28 @@
         display: block;
         width: 100%;
         height: auto;
+        transition: 200ms all;
+        &:hover {
+            fill: $lime-green;
+        }
     }
 }
 
 .footer-navbar {
     width: 100%;
     margin-top: 2.4rem;
+    @media (min-width: $desktop-width) {
+        display: flex;
+        margin: 0;
+        text-align: left;
+    }
 }
 
 .footerlinks {
     width: inherit;
-    text-align: center;
+    @media (min-width: $desktop-width) {
+        width: 30%;
+    }
     &__items {
 
     }
@@ -188,12 +314,18 @@
         font-weight: $font-weight-bold;
         color: $white;
         text-decoration: none;
+        transition: 200ms all;
+        &:hover {
+            color: $lime-green;
+        }
     }
 }
 
 .footer-primaryBtn {
     margin-top: 3.2rem;
-    text-align: center;
+    @media (min-width: $desktop-width) {
+        margin: 0;
+    }
 }
 
 .copyrights {
@@ -203,10 +335,13 @@
 .attribution {
     font-size: 1.4rem;
     margin-top: 2.4rem;
-    text-align: center;
     & a {
         color: $very-light-gray;
         text-decoration: none;
+        transition: 200ms all;
+        &:hover {
+            color: $lime-green;
+        }
     }
 }
 
@@ -219,12 +354,33 @@
 .primaryBtn {
     display: inline-block;
     padding: 16px 32px;
+    position: relative;
     border-radius: 50px;
-    background: rgb(49,211,92);
+    background: rgba(49,211,92,1);
     background: linear-gradient(90deg, rgba(49,211,92,1) 30%, rgba(43,183,218,1) 100%);
     color: #fff;
     font-size: 1.8rem;
     line-height: 0.9em;
     font-weight: $font-weight-extra-bold;
     text-decoration: none;
+    overflow: hidden;
+    &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(255,255,255,0.4);
+        border-radius: 50px;
+        z-index: 9999;
+        transform: translateX(-110%);
+        transition: 200ms all;
+    }
+    &:hover {
+        &::after {
+            left: 0%;
+            transform: translateX(0%);
+        }
+    }
 }
