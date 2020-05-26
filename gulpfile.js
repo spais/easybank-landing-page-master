@@ -1,7 +1,7 @@
 const 
 
     // development mode?
-    devBuild = (process.env.NODE_ENV !== 'production'),
+    devBuild = (process.env.NODE_ENV === 'production'),
 
     // modules
     gulp = require('gulp'),
@@ -80,8 +80,8 @@ const
         .pipe(postcss([
             assets({ loadPaths: ['images/'] }),
             autoprefixer({ BrowsersList: ['last 2 versions', '> 2%'] }),
-            //mqpacker
-            //cssnano
+            mqpacker,
+            cssnano
         ]))
         .pipe(sourcemaps ? sourcemaps.write() : noop())
         .pipe(gulp.dest(build + 'css/'));
